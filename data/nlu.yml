@@ -6,87 +6,269 @@ nlu:
     - hey
     - hello
     - hi
-    - hello there
     - good morning
     - good evening
-    - moin
     - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
 
-- intent: goodbye
+- intent: nearest_attraction
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - nearest attraction
+    - nearest attractions
+    - Nearest Attraction
+    - Nearest Attractions
+    - NEAREST ATTRACTION
+    - NEAREST ATTRACTIONS
 
-- intent: affirm
+- intent: marine_drive
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - Read More
+    - marine Drive
+    - Marine Drive
 
-- intent: deny
+- intent: mattancherry
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - Read More
+    - mattancherry
+    - Mattancherry
 
-- intent: mood_great
+- intent: fort_kochi
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Read More
+    - Fort kochi
+    - fort kochi
 
-- intent: mood_unhappy
+- intent: book_rooms
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - book rooms
+    - Book Rooms
+    - book room
+    - Book Room
 
-- intent: bot_challenge
+- intent: dulex_room_details
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Read More
+    - Dulex Room
+    - dulex room
+
+- intent: junior_suite_details
+  examples: |
+    - Read More
+    - Junior Suite
+    - junior suite
+
+- intent: club_suite_details
+  examples: |
+    - Read More
+    - Club Suite
+    - club suite
+
+- intent: book_room_now
+  examples: |
+    - Book Now
+    - BOOK NOW
+    - book now
+
+- intent: faqbreakfast
+  examples: |
+    - breakfast menu
+    - can I see your breakfast menu
+    - please show me the breakfast menu
+    - show me your breakfast menu
+    - Breakfast Menu
+
+- intent: faqcancellationpolicy
+  examples: |
+    - what is the cancellation policy?
+    - cancel policy
+    - what should I do for cancelling the reservation?
+    - what is the cancellation process
+    - cancellation policy?
+
+- intent: faqcheckin
+  examples: |
+    - What is the check-in time of a hotel?
+    - What are the standard check-in?
+    - At what time can I check-in?
+    - what is the checkin time?
+    - what is the check-in time?
+    - Check-in time?
+
+- intent: faqcheckinage
+  examples: |
+    - what is the minimum age required to check in?
+    - check in age
+    - age for check in
+    - at what age do you allow me to check in
+    - minimum age required to check in?
+
+- intent: faqcheckout
+  examples: |
+    - what is the check-out time?
+    - what is the checkout time?
+    - What is the check-out time of a hotel?
+    - checkout time?
+
+- intent: faqchildrenage
+  examples: |
+    - what is the maximum age for the children to stay for free?
+    - is it possible for my children to stay for free?
+    - can children stay for free
+    - Do children stay for free?
+
+- intent: faqearlycheckin
+  examples: |
+    - is it possible for early check in
+    - will you allow for the early check in?
+    - early check in
+
+- intent: faqlatecheckin
+  examples: |
+    - is it possible for late check in?
+    - late check-in
+    - will you allow for the late check in?
+
+- intent: faqlatecheckout
+  examples: |
+    - Can I request a late check out?
+    - is it possible for late check out
+    - will you allow for the late check out?
+    - late check out
+
+- intent: faqroomcount
+  examples: |
+    - is there a limit for the number of rooms a person can book
+    - number of rooms a person can reserve
+    - no.of rooms a person can book
+
+- intent: faqbabycot
+  examples: |
+    - what about baby cots
+    - Do you provide a baby cot?
+    - will you arrange a bay cot for my baby?
+    - is there a baby cot in the room
+    - baby cots provided?
+    - baby cots
+    - Are baby cots available at all of your hotels?
+    - Are baby cots available for the rooms?
+
+- intent: faqbreakfasttime
+  examples: |
+    - can you specify the time for the breakfast?
+    - at what time will you serve the breakfast?
+    - what is the time for the breakfast?
+
+- intent: faqrefundable
+  examples: |
+    - is it possible to get a refund for my room?
+    - what is the refund policy
+    - is refund available
+    - Is my room refundable?
+
+- intent: faqreceptiontime
+  examples: |
+    - is reception open now?
+    - is reception open all the time
+    - what is the timing of reception?
+    - Is Reception open 24 hours?
+    - reception time
+    - Reception Time
+
+- intent: faqparking
+  examples: |
+    - How do I know if the hotel has parking facilities?
+    - car parking available?
+    - do you provide car parking?
+    - is there a parking space
+    - Does Hotel provide parking?
+    - is car parking available?
+    - can I park my car in the hotel car parking
+    - is there a space for parking my car?
+    - car parking
+    - Are there car parking spaces or a car park?
+
+- intent: faqparkingcost
+  examples: |
+    - what is the car parking cost?
+    - parking cost
+    - Parking Cost
+    - How much does parking cost?
+
+- intent: faqpartialcancel
+  examples: |
+    - Can I cancel only certain parts of my reservation (for example one of the two booked rooms)?
+    - is it possible for partially cancelling the rooms
+    - Can I partially cancel my hotel booking?
+
+- intent: faq
+  examples: |
+    - FAQ
+    - faq
+    - Faq
+
+- intent: faqpetpolicy
+  examples: |
+    - Can I bring my pet?
+    - is it possible to bring my pets with me
+    - can I bring my pets with me?
+    - is there a charge for bringing my pets
+    - Are pets allowed to stay at the hotel?
+    - pet policy
+    contact number
+- intent: faqreservaconfirm
+  examples: |
+    - How can I confirm that my reservation has been made?
+    - can I know is my reservation confirmed?
+    - how can I confirm that the reservation is complete?
+    - how to know that the reservation is confirmed?
+    - How do I know if my reservation is confirmed?
+
+- intent: faqnearestairport
+  examples: |
+    - airport?
+    - where is the nearest airport?
+    - is there an airport near by?
+    - is there an airport very close to the hotel?
+    - which is the nearest airport
+
+- intent: faqmodifyreservation
+  examples: |
+    - If I change the dates of my stay, will this influence the price?
+    - can I modify my reservation
+    - If I modify my reservation will my rate change?
+
+- intent: faqmeetingroom
+  examples: |
+    - which are the meeting equipment available in the hotel?
+    - I want to arrange a meeting
+    - what are the available facilities for arranging meeting there?
+    - meeting arrangements in the hotel
+
+- intent: faqsecurity
+  examples: |
+    - tell me about the security services
+    - tell me the security arrangements of the hotel
+    - what are the security systems available
+    - What security arrangements are available in your hotel?
+
+- intent: faqluggage
+  examples: |
+    - can you store my luggages?
+    - will you store my luggages?
+    - luggage storage facility available?
+    - is there a place for storing my luggage?
+    - is it possible to store my luggage when I go out
+    - store luggages
+    - can I leave my luggages?
+    - will you store my luggage?
+
+- intent: faqcontactnumber
+  examples: |
+    - What is the customer support number?
+    - What is your phone number?
+    - can you give me the hotel contact number
+    - contact number
+    - is there a contact number for the hotel?
+    - What is the contact number of the reception?
+
+
+
