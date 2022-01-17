@@ -2,288 +2,75 @@ version: "2.0"
 
 stories:
 
-- story: marine_nearestattra
+
+- story: carousel
+  steps:
+  - intent:  menu
+  - action:  action_carousels
+  - intent: buy_pizza
+  - action: simple_pizza_form
+  - active_loop: simple_pizza_form
+  - intent: stop
+  - action: utter_ask_continue
+  - or: 
+    - intent: stop
+    - intent: affirm
+  - action: action_deactivate_loop
+  - active_loop: null
+
+
+- story: sad path 1
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: nearest_attraction
-  - action: action_nearest_attractions
-  - intent: marine_drive
-  - action: utter_marine
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
 
-- story: mattanche_nearestattra
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_image
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: interactive_story_1
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: nearest_attraction
-  - action: action_nearest_attractions
-  - intent: mattancherry
-  - action: utter_mattancherry
-
-- story: fortkochi_nearestattra
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: nearest_attraction
-  - action: action_nearest_attractions
-  - intent: fort_kochi
-  - action: utter_fortkochi
-
-- story: book_room_dulex_details
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: book_rooms
-  - action: action_book_rooms
-  - intent: dulex_room_details
-  - action: utter_dulexroom_details
-
-- story: book_room_juniorsuite_details
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: book_rooms
-  - action: action_book_rooms
-  - intent: junior_suite_details
-  - action: utter_juniorsuite_details
-
-- story: book_room_clubsuitesuite_details
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: book_rooms
-  - action: action_book_rooms
-  - intent: club_suite_details
-  - action: utter_clubsuite_details
-
-- story: book_room_now
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: book_rooms
-  - action: action_book_rooms
-  - intent: book_room_now
-  - action: book_room_form 
-  - action: action_book_rooms_details
-
-- story: faqbreakfastmenu
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqbreakfast
-  - action: utter_faqbreakfast
-
-- story: cancellationplicyfaq
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqcancellationpolicy
-  - action: utter_cancellationpolicy  
-
-- story: faqcheckin
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqcheckin
-  - action: utter_checkintime
-
-- story: faqminimumage
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqcheckinage
-  - action: utter_miminumage
-
-- story: faqcheckouttime
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqcheckout
-  - action: utter_checkout 
-
-- story: faqchildrenage
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqchildrenage
-  - action: utter_childrenage
-
-- story: faqearlycheckin
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqearlycheckin
-  - action: utter_earlycheckin
-
-- story: faqlatecheckin
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqlatecheckin
-  - action: utter_latecheckin
-
-- story: faqlatecheckout
-  steps:
-  - intent: faqlatecheckout
-  - action: utter_latecheckout
-
-- story: faqroomcountdetails
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqroomcount
-  - action: utter_roomcount
-
-- story: babycotfaq
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqbabycot
-  - action: utter_babycot
-
-- story: breakfasttime
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqbreakfasttime
-  - action: utter_breakfasttime
-
-- story: refundpolicy
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqrefundable
-  - action: utter_refundable
-
-- story: receptiontime
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqreceptiontime
-  - action: utter_receptiontime 
-
-- story: carparking
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqparking
-  - action: utter_carparking 
-
-- story: parkingcost
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqparkingcost
-  - action: utter_parkingcost 
-
-- story: faqpartialcancel
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqpartialcancel
-  - action: utter_partialcancel
-
-- story: petpolicyfaq
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqpetpolicy
-  - action: utter_petpolicy
-
-- story: reservationconfirm
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqreservaconfirm
-  - action: utter_reservationconfirm
-
-- story: nearestairportfaq
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqnearestairport
-  - action: utter_nearestairport
-
-- story: modifyreservation
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqmodifyreservation
-  - action: utter_modifyreservation 
-
-- story: meetingroom
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqmeetingroom 
-  - action: utter_meetingroom
-
-- story: security
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqsecurity 
-  - action: utter_security
-
-- story: luggahes
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqluggage 
-  - action: utter_luggage 
-
-- story: contactnumber
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: faq
-  - action: utter_faq_prompt 
-  - intent: faqcontactnumber 
-  - action: utter_contactnumber  
-
+  - intent: buy_pizza
+  - action: simple_pizza_form
+  - active_loop: simple_pizza_form
+  - slot_was_set:
+    - requested_slot: vegetarian
+  - slot_was_set:
+    - vegetarian: true
+  - slot_was_set:
+    - requested_slot: pizza_type
+  - slot_was_set:
+    - pizza_type: BURGER
+  - slot_was_set:
+    - requested_slot: pizza_size
+  - slot_was_set:
+    - pizza_size: large
+  - slot_was_set:
+    - requested_slot: custom_pizza
+  - slot_was_set:
+    - custom_pizza: true   
+  - slot_was_set:
+    - requested_slot: pizza_custom_choice
+  - slot_was_set:
+    - pizza_custom_choice: Toppings
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+#  - action: utter_submit
+  - action: utter_pizza_slots
+  - intent: goodbye
+  - action: utter_goodbye
