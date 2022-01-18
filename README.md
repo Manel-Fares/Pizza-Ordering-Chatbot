@@ -2,4 +2,6 @@
 
 <br>
 <br>
-<div class="center"><video src='demo/Pizza-Ordering-Chatbot.wmv' width=180/></div>
+<p align="center">
+  <img src="demo/demo.png">
+</p>
